@@ -18,6 +18,7 @@
         <th>Neighborhood</th>
         <th>Pet Policy</th>
         <th>Price</th>
+        <th>Address</th>
         <th>User</th>
         <th>Actions</th>
       </tr>
@@ -33,6 +34,7 @@
         <td><%= property.neighborhood %></td>
         <td><%= property.policy %></td>
         <td><%= property.price %></td>
+        <td><%= property.address %></td>
         <td><%= property.user.username %></td>
         <td>
           <a href="/properties/<%= property.id %>" class="btn btn-primary">Show</a>

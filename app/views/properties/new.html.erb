@@ -99,7 +99,17 @@
         <input type="text" id="price" name="price" placeholder="Price" class="form-control" value="<%= @property.price %>">
       </div>
 
-    
+      <!-- Label and input for address -->
+      <div class="form-group">
+        <label for="address" class="control-label">
+          Address
+        </label>
+
+        <input type="text" id="address" name="address" placeholder="Address" class="form-control" value="<%= @property.address %>">
+      </div>
+
+
+
       <!-- Label and input for user_id -->
     <input type="hidden" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%=current_user.id%>">
 

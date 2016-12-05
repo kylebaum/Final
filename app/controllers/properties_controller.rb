@@ -29,6 +29,7 @@ class PropertiesController < ApplicationController
     @property.neighborhood = params[:neighborhood]
     @property.policy = params[:policy]
     @property.price = params[:price]
+    @property.address = params[:address]
     @property.user_id = params[:user_id]
 
     save_status = @property.save
