@@ -9,15 +9,15 @@
       <dd><%= @property.caption %></dd>
 
       <dt>Image</dt>
-      <dd><%= @property.image %></dd>
+      <dd><img src="<%= @property.image %>" class="img-responsive"></dd>
 
-      <dt>Houseorapartment</dt>
+      <dt>House or Apartment</dt>
       <dd><%= @property.houseorapartment %></dd>
 
-      <dt>Numberofbedroom</dt>
+      <dt>Number of bedrooms</dt>
       <dd><%= @property.numberofbedroom %></dd>
 
-      <dt>Numberofbathroom</dt>
+      <dt>Number of bathrooms</dt>
       <dd><%= @property.numberofbathroom %></dd>
 
       <dt>City</dt>
@@ -26,14 +26,14 @@
       <dt>Neighborhood</dt>
       <dd><%= @property.neighborhood %></dd>
 
-      <dt>Policy</dt>
+      <dt>Pet Policy</dt>
       <dd><%= @property.policy %></dd>
 
       <dt>Price</dt>
       <dd><%= @property.price %></dd>
 
       <dt>User</dt>
-      <dd><%= @property.user_id %></dd>
+      <dd><%= @property.user.username %></dd>
 
     </dl>
 

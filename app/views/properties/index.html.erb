@@ -11,12 +11,12 @@
       <tr>
         <th>Caption</th>
         <th>Image</th>
-        <th>Houseorapartment</th>
-        <th>Numberofbedroom</th>
-        <th>Numberofbathroom</th>
+        <th>House or Apartment</th>
+        <th>Number of bedrooms</th>
+        <th>Number of bathrooms</th>
         <th>City</th>
         <th>Neighborhood</th>
-        <th>Policy</th>
+        <th>Pet Policy</th>
         <th>Price</th>
         <th>User</th>
         <th>Actions</th>
@@ -25,7 +25,7 @@
       <% @properties.each do |property| %>
       <tr>
         <td><%= property.caption %></td>
-        <td><%= property.image %></td>
+        <td><img src="<%= property.image %>" class="img-responsive"></td>
         <td><%= property.houseorapartment %></td>
         <td><%= property.numberofbedroom %></td>
         <td><%= property.numberofbathroom %></td>
@@ -33,7 +33,7 @@
         <td><%= property.neighborhood %></td>
         <td><%= property.policy %></td>
         <td><%= property.price %></td>
-        <td><%= property.user_id %></td>
+        <td><%= property.user.username %></td>
         <td>
           <a href="/properties/<%= property.id %>" class="btn btn-primary">Show</a>
           <a href="/properties/<%= property.id %>/edit" class="btn btn-warning">Edit</a>

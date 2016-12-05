@@ -18,7 +18,7 @@
       <% @maintenances.each do |maintenance| %>
       <tr>
         <td><%= maintenance.property_id %></td>
-        <td><%= maintenance.user_id %></td>
+        <td><%= maintenance.user.username %></td>
         <td><%= maintenance.body %></td>
         <td>
           <a href="/maintenances/<%= maintenance.id %>" class="btn btn-primary">Show</a>
