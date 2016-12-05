@@ -24,7 +24,13 @@
           Property
         </label>
 
-        <input type="text" id="property_id" name="property_id" placeholder="Property" class="form-control" value="<%= @maintenance.property_id %>">
+        <%= select_tag(:property_id, options_from_collection_for_select(Property.all, :id, :address, @maintenance.property_id), :class => "form-control") %>
+
+        <p class="help-block">
+          <a href="/properties/new">or add a new property</a>
+        </p>
+
+      
       </div>
 
       <!-- Label and input for user_id -->

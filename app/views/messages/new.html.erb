@@ -20,12 +20,20 @@
 
       <!-- Label and input for property_id -->
       <div class="form-group">
-        <label for="property_id" class="control-label">
-          Property
-        </label>
+          <label for="director_id" class="control-label">
+            Property
+          </label>
 
-        <input type="text" id="property_id" name="property_id" placeholder="Property" class="form-control" value="<%= @message.property_id %>">
-      </div>
+
+          <%= select_tag(:property_id, options_from_collection_for_select(Property.all, :id, :address, @message.property_id), :class => "form-control") %>
+
+          <p class="help-block">
+            <a href="/properties/new">or add a new property</a>
+          </p>
+
+        </div>
+
+    
 
       <!-- Label and input for user_id -->
         <input type="hidden" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%=current_user.id%>">
