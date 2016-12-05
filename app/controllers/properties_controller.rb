@@ -8,6 +8,13 @@ class PropertiesController < ApplicationController
   def show
     @property = Property.find(params[:id])
 
+    parsed_data = JSON.parse(open("http://maps.googleapis.com/maps/api/geocode/json?address=" + @property.address.to_s).read)
+    @lat = parsed_data["results"][0]["geometry"]["location"]["lat"]
+    @lng = parsed_data["results"][0]["geometry"]["location"]["lng"]
+
+    @latitude = @lat
+    @longitude = @lng
+
     render("properties/show.html.erb")
   end
 
