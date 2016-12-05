@@ -1,0 +1,32 @@
+<div class="page-header">
+  <h1>
+    Maintenances
+    <a href="/maintenances/new" class="btn btn-lg btn-success">New Maintenance</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Property</th>
+        <th>User</th>
+        <th>Body</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @maintenances.each do |maintenance| %>
+      <tr>
+        <td><%= maintenance.property_id %></td>
+        <td><%= maintenance.user_id %></td>
+        <td><%= maintenance.body %></td>
+        <td>
+          <a href="/maintenances/<%= maintenance.id %>" class="btn btn-primary">Show</a>
+          <a href="/maintenances/<%= maintenance.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_maintenance/<%= maintenance.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
