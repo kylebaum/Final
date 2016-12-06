@@ -26,20 +26,22 @@
       <% @properties.each do |property| %>
       <tr>
         <td><%= property.caption %></td>
-        <td><img src="<%= property.image %>" class="img-responsive"></td>
+        <td><a href="/properties/<%= property.id %>"><img src="<%= property.image %>" class="img-responsive"> </a></td>
         <td><%= property.houseorapartment %></td>
         <td><%= property.numberofbedroom %></td>
         <td><%= property.numberofbathroom %></td>
         <td><%= property.city %></td>
         <td><%= property.neighborhood %></td>
         <td><%= property.policy %></td>
-        <td><%= property.price %></td>
+        <td>$<%= property.price %></td>
         <td><%= property.address %></td>
         <td><%= property.user.username %></td>
         <td>
           <a href="/properties/<%= property.id %>" class="btn btn-primary">Show</a>
-          <a href="/properties/<%= property.id %>/edit" class="btn btn-warning">Edit</a>
-          <a href="/delete_property/<%= property.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+          <% if current_user.id == property.user_id  %>
+                  <a href="/properties/<%= property.id %>/edit" class="btn btn-warning">Edit</a>
+                  <a href="/delete_property/<%= property.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+                  <% end %>
         </td>
       </tr>
       <% end %>
