@@ -15,7 +15,7 @@
         <th>Actions</th>
       </tr>
 
-      <% @messages.each do |message| %>
+      <% @messages.where({ :user_id => current_user.id }).each do |message| %>
       <tr>
         <td><%= message.property.address %></td>
         <td><%= message.user.username %></td>
