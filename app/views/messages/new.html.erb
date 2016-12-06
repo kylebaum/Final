@@ -25,7 +25,7 @@
           </label>
 
 
-          <%= select_tag(:property_id, options_from_collection_for_select(Property.all, :id, :address, @message.property_id), :class => "form-control") %>
+          <%= select_tag(:property_id, options_from_collection_for_select(Property.where({ :user_id => current_user.id }), :id, :address, @message.property_id), :class => "form-control") %>
 
           <p class="help-block">
             <a href="/properties/new">or add a new property</a>
@@ -33,7 +33,7 @@
 
         </div>
 
-    
+
 
       <!-- Label and input for user_id -->
         <input type="hidden" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%=current_user.id%>">

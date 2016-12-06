@@ -22,8 +22,10 @@
         <td><%= maintenance.body %></td>
         <td>
           <a href="/maintenances/<%= maintenance.id %>" class="btn btn-primary">Show</a>
-          <a href="/maintenances/<%= maintenance.id %>/edit" class="btn btn-warning">Edit</a>
-          <a href="/delete_maintenance/<%= maintenance.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+          <% if current_user.id == maintenance.user_id  %>
+                  <a href="/maintenances/<%= maintenance.id %>/edit" class="btn btn-warning">Edit</a>
+                  <a href="/delete_maintenances/<%= maintenance.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+                  <% end %>
         </td>
       </tr>
       <% end %>
