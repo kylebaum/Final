@@ -7,6 +7,9 @@ class User < ApplicationRecord
       has_many :properties
       has_many :messages
       has_many :maintenances
+      has_many :tenants
+      has_many :owners
+      has_many :managers
 
       validates :username, :uniqueness => true
       validates :username, :presence => true
