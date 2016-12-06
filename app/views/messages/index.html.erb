@@ -10,14 +10,14 @@
     <table class="table table-striped table-hover">
       <tr>
         <th>Property</th>
-        <th>User</th>
-        <th>Body</th>
+        <th>Tenant</th>
+        <th>Message</th>
         <th>Actions</th>
       </tr>
 
       <% @messages.each do |message| %>
       <tr>
-        <td><%= message.property_id %></td>
+        <td><%= message.property.address %></td>
         <td><%= message.user.username %></td>
         <td><%= message.body %></td>
         <td>
@@ -27,7 +27,7 @@
                   <a href="/delete_message/<%= message.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
                   <% end %>
 
-        
+
         </td>
       </tr>
       <% end %>
