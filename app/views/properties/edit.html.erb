@@ -42,7 +42,10 @@
           House or Apartment
         </label>
 
-        <input type="text" id="houseorapartment" name="houseorapartment" placeholder="Houseorapartment" class="form-control" value="<%= @property.houseorapartment %>">
+        <select name="houseorapartment" id="houseorapartment" class="form-control" class="form-control" value="<%= @property.houseorapartment %>">>
+  <option value="House">House</option>
+  <option selected="selected" value="Apartment">Apartment</option>
+  </select>
       </div>
 
       <!-- Label and input for numberofbedroom -->
@@ -87,13 +90,18 @@
          Pet Policy
         </label>
 
-        <textarea id="policy" name="policy" placeholder="Policy" class="form-control" rows="3"><%= @property.policy %></textarea>
+        <select name="policy" id="policy" class="form-control" class="form-control" value="<%= @property.policy %>">>
+        <option selected="selected" value="None allowed">None allowed</option>
+        <option  value="Dogs only">Dogs only</option>
+        <option  value="Cats only">Cats only</option>
+        <option value="Dogs and cats">Dogs and cats</option>
+        </select>
       </div>
 
       <!-- Label and input for price -->
       <div class="form-group">
         <label for="price" class="control-label">
-          Price
+          Rent
         </label>
 
         <input type="text" id="price" name="price" placeholder="Price" class="form-control" value="<%= @property.price %>">
