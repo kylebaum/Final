@@ -18,14 +18,17 @@
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
-      <!-- Label and input for caption -->
+      <!-- Label and input for address -->
       <div class="form-group">
-        <label for="caption" class="control-label">
-          Description
+        <label for="address" class="control-label">
+          Address
         </label>
 
-        <textarea id="caption" name="caption" placeholder="Caption" class="form-control" rows="3"><%= @property.caption %></textarea>
+        <input type="text" id="address" name="address" placeholder="Address" class="form-control" value="<%= @property.address %>">
       </div>
+
+
+
 
       <!-- Label and input for image -->
       <div class="form-group">
@@ -35,6 +38,24 @@
 
         <input type="text" id="image" name="image" placeholder="Image" class="form-control" value="<%= @property.image %>">
       </div>
+
+<!-- Label and input for caption -->
+      <div class="form-group">
+        <label for="caption" class="control-label">
+          Description
+        </label>
+
+        <textarea id="caption" name="caption" placeholder="Caption" class="form-control" rows="3"><%= @property.caption %></textarea>
+      </div>
+
+      <!-- Label and input for neighborhood -->
+      <div class="form-group">
+        <label for="neighborhood" class="control-label">
+          Neighborhood
+        </label>
+        <input type="text" id="neighborhood" name="neighborhood" placeholder="Neighborhood" class="form-control" value="<%= @property.neighborhood %>">
+      </div>
+
 
       <!-- Label and input for houseorapartment -->
       <div class="form-group">
@@ -72,23 +93,11 @@
         <input type="text" id="numberofbathroom" name="numberofbathroom" placeholder="Number" class="form-control" value="<%= @property.numberofbathroom %>">
       </div>
 
-      <!-- Label and input for city -->
-      <div class="form-group">
-        <label for="city" class="control-label">
-          City
-        </label>
 
-        <input type="text" id="city" name="city" placeholder="City" class="form-control" value="<%= @property.city %>">
-      </div>
 
-      <!-- Label and input for neighborhood -->
-      <div class="form-group">
-        <label for="neighborhood" class="control-label">
-          Neighborhood
-        </label>
 
-        <input type="text" id="neighborhood" name="neighborhood" placeholder="Neighborhood" class="form-control" value="<%= @property.neighborhood %>">
-      </div>
+
+
 
       <!-- Label and input for policy -->
       <div class="form-group">
@@ -115,14 +124,7 @@
         <input type="text" id="price" name="price" placeholder="Price" class="form-control" value="<%= @property.price %>">
       </div>
 
-      <!-- Label and input for address -->
-      <div class="form-group">
-        <label for="address" class="control-label">
-          Address
-        </label>
 
-        <input type="text" id="address" name="address" placeholder="Address" class="form-control" value="<%= @property.address %>">
-      </div>
 
 
 

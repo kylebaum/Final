@@ -20,7 +20,8 @@
     <dt>Maintenance Request</dt>
     <dd><a href="/maintenances/new" class="btn btn-small btn-primary">New Request</a></dd>
 <% end %>
-
+<dt>Neighborhood</dt>
+<dd><%= @property.neighborhood %></dd>
       <dt>House or Apartment</dt>
       <dd><%= @property.houseorapartment %></dd>
 
@@ -30,11 +31,8 @@
       <dt>Number of bathrooms</dt>
       <dd><%= @property.numberofbathroom %></dd>
 
-      <dt>City</dt>
-      <dd><%= @property.city %></dd>
 
-      <dt>Neighborhood</dt>
-      <dd><%= @property.neighborhood %></dd>
+
 
       <dt>Pet Policy</dt>
       <dd><%= @property.policy %></dd>
@@ -44,7 +42,7 @@
 
 
 
-      <dt>User</dt>
+      <dt>Manager</dt>
       <dd><%= @property.user.username %></dd>
 
       <dt>Map</dt>

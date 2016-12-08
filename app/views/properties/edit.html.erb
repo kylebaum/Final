@@ -9,7 +9,7 @@
 <% end %>
 
 <div class="page-header">
-  <h3>Edit Property #<%= @property.id %></h3>
+  <h3>Edit <%= @property.address %></h3>
 </div>
 
 <div class="row">
@@ -17,6 +17,24 @@
     <form action="/update_property/<%= @property.id %>" method="post">
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for address -->
+      <div class="form-group">
+        <label for="address" class="control-label">
+          Address
+        </label>
+
+        <input type="text" id="address" name="address" placeholder="Address" class="form-control" value="<%= @property.address %>">
+      </div>
+
+      <!-- Label and input for image -->
+      <div class="form-group">
+        <label for="image" class="control-label">
+          Image
+        </label>
+
+        <input type="text" id="image" name="image" placeholder="Image" class="form-control" value="<%= @property.image %>">
+      </div>
 
       <!-- Label and input for caption -->
       <div class="form-group">
@@ -27,13 +45,13 @@
         <textarea id="caption" name="caption" placeholder="Caption" class="form-control" rows="3"><%= @property.caption %></textarea>
       </div>
 
-      <!-- Label and input for image -->
+      <!-- Label and input for neighborhood -->
       <div class="form-group">
-        <label for="image" class="control-label">
-          Image
+        <label for="neighborhood" class="control-label">
+          Neighborhood
         </label>
 
-        <input type="text" id="image" name="image" placeholder="Image" class="form-control" value="<%= @property.image %>">
+        <input type="text" id="neighborhood" name="neighborhood" placeholder="Neighborhood" class="form-control" value="<%= @property.neighborhood %>">
       </div>
 
       <!-- Label and input for houseorapartment -->
@@ -66,23 +84,9 @@
         <input type="text" id="numberofbathroom" name="numberofbathroom" placeholder="Numberofbathroom" class="form-control" value="<%= @property.numberofbathroom %>">
       </div>
 
-      <!-- Label and input for city -->
-      <div class="form-group">
-        <label for="city" class="control-label">
-          City
-        </label>
 
-        <input type="text" id="city" name="city" placeholder="City" class="form-control" value="<%= @property.city %>">
-      </div>
 
-      <!-- Label and input for neighborhood -->
-      <div class="form-group">
-        <label for="neighborhood" class="control-label">
-          Neighborhood
-        </label>
 
-        <input type="text" id="neighborhood" name="neighborhood" placeholder="Neighborhood" class="form-control" value="<%= @property.neighborhood %>">
-      </div>
 
       <!-- Label and input for policy -->
       <div class="form-group">
@@ -107,14 +111,7 @@
         <input type="text" id="price" name="price" placeholder="Price" class="form-control" value="<%= @property.price %>">
       </div>
 
-      <!-- Label and input for address -->
-      <div class="form-group">
-        <label for="address" class="control-label">
-          Address
-        </label>
 
-        <input type="text" id="address" name="address" placeholder="Address" class="form-control" value="<%= @property.address %>">
-      </div>
 
       <!-- Label and input for user_id -->
         <input type="hidden" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%=current_user.id%>">
