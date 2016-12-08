@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h3><%= @property.user.username %>'s Property </h3>
+  <h3>Property #<%= @property.id %></h3>
 </div>
 
 <div class="row">
@@ -10,10 +10,6 @@
 
       <dt>Image</dt>
       <dd><img src="<%= @property.image %>" class="img-responsive"></dd>
-
-
-      <dt>Address</dt>
-      <dd><%= @property.address %></dd>
 
 <% if current_user.id == @property.user_id  %>
     <dt>Message</dt>
@@ -44,6 +40,8 @@
       <dt>Rent</dt>
       <dd>$<%= @property.price %></dd>
 
+      <dt>Address</dt>
+      <dd><%= @property.address %></dd>
 
       <dt>User</dt>
       <dd><%= @property.user.username %></dd>
