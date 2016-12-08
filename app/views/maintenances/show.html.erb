@@ -20,11 +20,10 @@
       <a href="/maintenances" class="btn btn-primary">
         Back
       </a>
-      <a href="/maintenances/<%= @maintenance.id %>/edit" class="btn btn-warning">
-        Edit
-      </a>
-      <a href="/delete_maintenance/<%= @maintenance.id %>" class="btn btn-danger" rel="nofollow">
-        Delete
+      <% if current_user.id == @maintenance.user_id  %>
+              <a href="/maintenances/<%= @maintenance.id %>/edit" class="btn btn-warning">Edit</a>
+              <a href="/delete_maintenance/<%= @maintenance.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+              <% end %>
       </a>
     </div>
   </div>

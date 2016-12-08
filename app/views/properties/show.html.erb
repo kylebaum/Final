@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h3><%= @property.user.username %>'s Property</h3>
+  <h3><%= @property.address %></h3>
 </div>
 
 <div class="row">
@@ -11,8 +11,7 @@
       <dt>Image</dt>
       <dd><img src="<%= @property.image %>" class="img-responsive"></dd>
 
-      <dt>Address</dt>
-      <dd><%= @property.address %></dd>
+
 
 <% if current_user.id == @property.user_id  %>
     <dt>Message</dt>
@@ -87,11 +86,10 @@
       <a href="/properties" class="btn btn-primary">
         Back
       </a>
-      <a href="/properties/<%= @property.id %>/edit" class="btn btn-warning">
-        Edit
-      </a>
-      <a href="/delete_property/<%= @property.id %>" class="btn btn-danger" rel="nofollow">
-        Delete
+      <% if current_user.id == @property.user_id  %>
+              <a href="/properties/<%= @property.id %>/edit" class="btn btn-warning">Edit</a>
+              <a href="/delete_property/<%= @property.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+              <% end %>
       </a>
     </div>
   </div>
