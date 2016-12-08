@@ -41,9 +41,9 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li><a href="/properties"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-          <span class="sr-only"></span> Properties </a> </li>
-          <li><a href="/users"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-          <span class="sr-only"></span> Managers </a> </li>
+          <span class="sr-only"></span> All Properties </a> </li>
+          <li><a href="/users/<%= current_user.id %>"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          <span class="sr-only"></span> My Properties </a> </li>
           <li><a href="/messages"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
   <span class="sr-only"></span> Messages </a> </li>
   <li><a href="/maintenances"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
