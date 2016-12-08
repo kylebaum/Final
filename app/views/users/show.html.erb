@@ -19,10 +19,8 @@
         <td><%= property.address %></td>
         <td>
           <a href="/properties/<%= property.id %>" class="btn btn-primary">Show</a>
-          <% if current_user.id == property.user_id  %>
-                  <a href="/properties/<%= property.id %>/edit" class="btn btn-warning">Edit</a>
-                  <a href="/delete_property/<%= property.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
-                  <% end %>
+          <a href="/properties/<%= property.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_property/<%= property.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
         </td>
       </tr>
       <% end %>
