@@ -6,5 +6,4 @@ class Property < ActiveRecord::Base
   has_many :maintenances
 
   validates :user_id, :presence => true
-  
 end
