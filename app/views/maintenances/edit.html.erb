@@ -9,7 +9,7 @@
 <% end %>
 
 <div class="page-header">
-  <h3>Edit Maintenance #<%= @maintenance.id %></h3>
+  <h3>Edit Maintenance Request </h3>
 </div>
 
 <div class="row">
@@ -26,6 +26,10 @@
 
       <%= select_tag(:property_id, options_from_collection_for_select(Property.where({ :user_id => current_user.id }), :id, :address, @maintenance.property_id), :class => "form-control") %>
       </div>
+
+      <p class="help-block">
+        <a href="/properties/new">or add a new property</a>
+      </p>
 
       <!-- Label and input for user_id -->
         <input type="hidden" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%=current_user.id%>">

@@ -18,8 +18,12 @@
         <td><%= user.username %></td>
         <td>
           <a href="/users/<%= user.id %>" class="btn btn-primary">Show</a>
+          <% if current_user.id == user.id  %>
+              <a href="/properties/new" class="btn btn-warning"> add a new property</a>
+              <% end %>
 
         </td>
+
       </tr>
       <% end %>
     </table>
